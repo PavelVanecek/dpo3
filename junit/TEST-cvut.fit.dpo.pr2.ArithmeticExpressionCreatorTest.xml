@@ -1,150 +1,135 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="4" failures="0" hostname="edita" name="cvut.fit.dpo.pr2.ArithmeticExpressionCreatorTest" tests="6" time="0.108" timestamp="2011-09-12T13:14:34">
+<testsuite errors="0" failures="0" hostname="corkscreewe.buk.cvut.cz" name="cvut.fit.dpo.pr2.ArithmeticExpressionCreatorTest" tests="6" time="0.066" timestamp="2012-11-19T23:48:43">
   <properties>
-    <property name="java.vendor" value="Sun Microsystems Inc." />
-    <property name="env.SESSION_MANAGER" value="local/edita:@/tmp/.ICE-unix/9220,unix/edita:/tmp/.ICE-unix/9220" />
-    <property name="env.LESSOPEN" value="| /usr/bin/lesspipe %s" />
+    <property name="java.vendor" value="Oracle Corporation" />
+    <property name="env.SESSION_MANAGER" value="local/unix:@/tmp/.ICE-unix/1319,unix/unix:/tmp/.ICE-unix/1319" />
+    <property name="env.LESSOPEN" value="||/usr/bin/lesspipe.sh %s" />
+    <property name="ant.file.type.dpo3" value="file" />
     <property name="sun.java.launcher" value="SUN_STANDARD" />
-    <property name="sun.management.compiler" value="HotSpot Tiered Compilers" />
+    <property name="env.QT_IM_MODULE" value="xim" />
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers" />
     <property name="os.name" value="Linux" />
-    <property name="sun.boot.class.path" value="/usr/lib/jvm/java-6-openjdk/jre/lib/resources.jar:/usr/lib/jvm/java-6-openjdk/jre/lib/rt.jar:/usr/lib/jvm/java-6-openjdk/jre/lib/sunrsasign.jar:/usr/lib/jvm/java-6-openjdk/jre/lib/jsse.jar:/usr/lib/jvm/java-6-openjdk/jre/lib/jce.jar:/usr/lib/jvm/java-6-openjdk/jre/lib/charsets.jar:/usr/lib/jvm/java-6-openjdk/jre/lib/netx.jar:/usr/lib/jvm/java-6-openjdk/jre/lib/plugin.jar:/usr/lib/jvm/java-6-openjdk/jre/lib/rhino.jar:/usr/lib/jvm/java-6-openjdk/jre/lib/modules/jdk.boot.jar:/usr/lib/jvm/java-6-openjdk/jre/classes" />
-    <property name="env.PWD" value="/home/kursjan/doc/eclipse/dpo_ws/2011_pr_composite_builder_iterator" />
-    <property name="env.XDG_SESSION_COOKIE" value="c11cfec4277491bef3ccec544d2f53b6-1315423489.780028-756569550" />
+    <property name="sun.boot.class.path" value="/usr/lib/jvm/java-1.7.0-openjdk-1.7.0.9.x86_64/jre/lib/resources.jar:/usr/lib/jvm/java-1.7.0-openjdk-1.7.0.9.x86_64/jre/lib/rt.jar:/usr/lib/jvm/java-1.7.0-openjdk-1.7.0.9.x86_64/jre/lib/sunrsasign.jar:/usr/lib/jvm/java-1.7.0-openjdk-1.7.0.9.x86_64/jre/lib/jsse.jar:/usr/lib/jvm/java-1.7.0-openjdk-1.7.0.9.x86_64/jre/lib/jce.jar:/usr/lib/jvm/java-1.7.0-openjdk-1.7.0.9.x86_64/jre/lib/charsets.jar:/usr/lib/jvm/java-1.7.0-openjdk-1.7.0.9.x86_64/jre/lib/netx.jar:/usr/lib/jvm/java-1.7.0-openjdk-1.7.0.9.x86_64/jre/lib/plugin.jar:/usr/lib/jvm/java-1.7.0-openjdk-1.7.0.9.x86_64/jre/lib/rhino.jar:/usr/lib/jvm/java-1.7.0-openjdk-1.7.0.9.x86_64/jre/lib/jfr.jar:/usr/lib/jvm/java-1.7.0-openjdk-1.7.0.9.x86_64/jre/classes" />
+    <property name="env.PWD" value="/home/cork/FIT/DPO/dpo3" />
     <property name="sun.desktop" value="gnome" />
     <property name="env.LANG" value="en_US.UTF-8" />
-    <property name="java.vm.specification.vendor" value="Sun Microsystems Inc." />
+    <property name="java.vm.specification.vendor" value="Oracle Corporation" />
     <property name="ant.home" value="/usr/share/ant" />
-    <property name="java.runtime.version" value="1.6.0_22-b22" />
-    <property name="env.DEFAULTS_PATH" value="/usr/share/gconf/xsession.default.path" />
+    <property name="java.runtime.version" value="1.7.0_09-icedtea-mockbuild_2012_10_17_15_53-b00" />
+    <property name="env.HISTSIZE" value="1000" />
+    <property name="env.XDG_VTNR" value="1" />
     <property name="env.DISPLAY" value=":0" />
-    <property name="user.name" value="kursjan" />
-    <property name="env._" value="/usr/bin/ant" />
-    <property name="env.USER" value="kursjan" />
+    <property name="env.QT_GRAPHICSSYSTEM_CHECKED" value="1" />
+    <property name="env.GJS_DEBUG_TOPICS" value="JS ERROR;JS LOG" />
+    <property name="user.name" value="cork" />
+    <property name="env.USER" value="cork" />
+    <property name="env.HISTCONTROL" value="ignoredups" />
     <property name="env.SHELL" value="/bin/bash" />
-    <property name="env.TOP" value="/home/honza2/doc/skola/stx_buildtree/jv+mop/stx/" />
-    <property name="ant.file.type.2011_pr_composite_builder_iterator" value="file" />
-    <property name="env.DESKTOP_SESSION" value="xsession" />
-    <property name="env.XDG_DATA_DIRS" value="/usr/share/xsession:/usr/share/gnome:/usr/local/share/:/usr/share/" />
-    <property name="env.PATH" value="/home/kursjan/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games" />
+    <property name="env.QTLIB" value="/usr/lib64/qt-3.3/lib" />
+    <property name="env.DESKTOP_SESSION" value="gnome" />
+    <property name="env.NLSPATH" value="/usr/dt/lib/nls/msg/%L/%N.cat" />
+    <property name="env.GJS_DEBUG_OUTPUT" value="stderr" />
+    <property name="env.PATH" value="/usr/lib64/qt-3.3/bin:/usr/lib64/ccache:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/home/cork/.local/bin:/home/cork/bin" />
     <property name="user.language" value="en" />
-    <property name="sun.boot.library.path" value="/usr/lib/jvm/java-6-openjdk/jre/lib/i386" />
+    <property name="env.LC_MONETARY" value="cs_CZ.utf8" />
+    <property name="env.IMSETTINGS_MODULE" value="none" />
+    <property name="sun.boot.library.path" value="/usr/lib/jvm/java-1.7.0-openjdk-1.7.0.9.x86_64/jre/lib/amd64" />
     <property name="ant.project.default-target" value="build" />
-    <property name="ant.project.name" value="2011_pr_composite_builder_iterator" />
-    <property name="java.version" value="1.6.0_22" />
+    <property name="ant.project.name" value="dpo3" />
+    <property name="java.version" value="1.7.0_09-icedtea" />
     <property name="user.timezone" value="" />
-    <property name="env.DBUS_SESSION_BUS_ADDRESS" value="unix:abstract=/tmp/dbus-caQUthyGSg,guid=b8fb10f29a13c37f77f8135200001f55" />
-    <property name="sun.arch.data.model" value="32" />
-    <property name="env.SSH_AGENT_PID" value="9258" />
-    <property name="java.endorsed.dirs" value="/usr/lib/jvm/java-6-openjdk/jre/lib/endorsed" />
+    <property name="env.DBUS_SESSION_BUS_ADDRESS" value="unix:abstract=/tmp/dbus-HBlpEgbS4m,guid=cdebaa3468899f5e6267ecb000000072" />
+    <property name="sun.arch.data.model" value="64" />
+    <property name="java.endorsed.dirs" value="/usr/lib/jvm/java-1.7.0-openjdk-1.7.0.9.x86_64/jre/lib/endorsed" />
     <property name="sun.cpu.isalist" value="" />
     <property name="sun.jnu.encoding" value="UTF-8" />
     <property name="file.encoding.pkg" value="sun.io" />
-    <property name="env.SHLVL" value="1" />
-    <property name="ECLIPSE_HOME" value="../../../../opt/eclipse_mi-dpo" />
+    <property name="env.SHLVL" value="2" />
+    <property name="ECLIPSE_HOME" value="../../../../../usr/lib64/eclipse" />
+    <property name="env.HOSTNAME" value="corkscreewe.buk.cvut.cz" />
     <property name="file.separator" value="/" />
     <property name="java.specification.name" value="Java Platform API Specification" />
+    <property name="env.IMSETTINGS_INTEGRATE_DESKTOP" value="yes" />
+    <property name="env.QTDIR" value="/usr/lib64/qt-3.3" />
     <property name="env.GNOME_DESKTOP_SESSION_ID" value="this-is-deprecated" />
-    <property name="java.class.version" value="50.0" />
-    <property name="env.GDMSESSION" value="xsession" />
-    <property name="env.GDM_KEYBOARD_LAYOUT" value="us" />
+    <property name="java.class.version" value="51.0" />
+    <property name="env.GDMSESSION" value="gnome" />
     <property name="user.country" value="US" />
-    <property name="env.GNOME_KEYRING_PID" value="9200" />
-    <property name="java.home" value="/usr/lib/jvm/java-6-openjdk/jre" />
+    <property name="env.GNOME_KEYRING_PID" value="1315" />
+    <property name="java.home" value="/usr/lib/jvm/java-1.7.0-openjdk-1.7.0.9.x86_64/jre" />
     <property name="java.vm.info" value="mixed mode" />
-    <property name="env.LOGNAME" value="kursjan" />
-    <property name="ant.file" value="/home/kursjan/Documents/eclipse/dpo_ws/2011_pr_composite_builder_iterator/build.xml" />
-    <property name="os.version" value="2.6.38-10-generic-pae" />
+    <property name="env.LOGNAME" value="cork" />
+    <property name="ant.file" value="/home/cork/FIT/DPO/dpo3/build.xml" />
+    <property name="os.version" value="3.6.6-1.fc17.x86_64" />
     <property name="path.separator" value=":" />
-    <property name="java.vm.version" value="20.0-b11" />
-    <property name="env.LANGUAGE" value="en_US:en" />
+    <property name="java.vm.version" value="23.2-b09" />
+    <property name="env.QTINC" value="/usr/lib64/qt-3.3/include" />
     <property name="ant.library.dir" value="/usr/share/ant/lib" />
     <property name="junit.output.dir" value="junit" />
     <property name="java.awt.printerjob" value="sun.print.PSPrinterJob" />
     <property name="env.TERM" value="xterm" />
-    <property name="env.WINDOWPATH" value="8" />
+    <property name="env.WINDOWPATH" value="1" />
     <property name="sun.io.unicode.encoding" value="UnicodeLittle" />
-    <property name="env.DESKTOP_AUTOSTART_ID" value="1035262e10c3e5a6a5131542349128900100000092200020" />
-    <property name="env.GDM_LANG" value="en_US.utf8" />
-    <property name="user.home" value="/home/kursjan" />
-    <property name="target" value="1.6" />
-    <property name="env.OLDPWD" value="/home/kursjan" />
-    <property name="java.specification.vendor" value="Sun Microsystems Inc." />
-    <property name="java.library.path" value="/usr/lib/jvm/java-6-openjdk/jre/lib/i386/server:/usr/lib/jvm/java-6-openjdk/jre/lib/i386:/usr/lib/jvm/java-6-openjdk/jre/../lib/i386:/usr/java/packages/lib/i386:/usr/lib/i386-linux-gnu/jni:/lib/i386-linux-gnu:/usr/lib/i386-linux-gnu:/usr/lib/jni:/lib:/usr/lib" />
-    <property name="java.vendor.url" value="http://java.sun.com/" />
-    <property name="java.vm.vendor" value="Sun Microsystems Inc." />
-    <property name="ant.file.2011_pr_composite_builder_iterator" value="/home/kursjan/Documents/eclipse/dpo_ws/2011_pr_composite_builder_iterator/build.xml" />
+    <property name="awt.toolkit" value="sun.awt.X11.XToolkit" />
+    <property name="env.XMODIFIERS" value="@im=none" />
+    <property name="env.LC_MEASUREMENT" value="cs_CZ.utf8" />
+    <property name="target" value="1.7" />
+    <property name="user.home" value="/home/cork" />
+    <property name="java.specification.vendor" value="Oracle Corporation" />
+    <property name="env.WINDOWID" value="46137349" />
+    <property name="java.vendor.url" value="http://java.oracle.com/" />
+    <property name="java.library.path" value="/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib" />
+    <property name="java.vm.vendor" value="Oracle Corporation" />
+    <property name="env.XDG_SEAT" value="seat0" />
     <property name="java.runtime.name" value="OpenJDK Runtime Environment" />
-    <property name="java.class.path" value="/home/kursjan/Documents/eclipse/dpo_ws/2011_pr_composite_builder_iterator/bin:/home/kursjan/Documents/eclipse/dpo_ws/2011_pr_composite_builder_iterator/lib/junit-4.9.jar:/usr/share/ant/lib/junit.jar:/usr/share/java/ant-launcher-1.8.1.jar:/usr/share/ant/lib/ant.jar:/usr/share/ant/lib/ant-junit.jar" />
-    <property name="ant.version" value="Apache Ant version 1.8.1 compiled on October 13 2010" />
-    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner cvut.fit.dpo.pr2.ArithmeticExpressionCreatorTest filtertrace=true haltOnError=false haltOnFailure=false formatter=org.apache.tools.ant.taskdefs.optional.junit.OutErrSummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true logtestlistenerevents=true formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/home/kursjan/Documents/eclipse/dpo_ws/2011_pr_composite_builder_iterator/junit/TEST-cvut.fit.dpo.pr2.ArithmeticExpressionCreatorTest.xml crashfile=/home/kursjan/Documents/eclipse/dpo_ws/2011_pr_composite_builder_iterator/junitvmwatcher7530721246423987541.properties propsfile=/home/kursjan/Documents/eclipse/dpo_ws/2011_pr_composite_builder_iterator/junit4837619447163244660.properties" />
-    <property name="env.UBUNTU_MENUPROXY" value="libappmenu.so" />
+    <property name="ant.version" value="Apache Ant(TM) version 1.8.3 compiled on February 29 2012" />
+    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner cvut.fit.dpo.pr2.ArithmeticExpressionCreatorTest filtertrace=true haltOnError=false haltOnFailure=false formatter=org.apache.tools.ant.taskdefs.optional.junit.OutErrSummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/home/cork/FIT/DPO/dpo3/junit/TEST-cvut.fit.dpo.pr2.ArithmeticExpressionCreatorTest.xml crashfile=/home/cork/FIT/DPO/dpo3/junitvmwatcher4635072938536880383.properties propsfile=/home/cork/FIT/DPO/dpo3/junit3605797432186592055.properties" />
+    <property name="java.class.path" value="/home/cork/FIT/DPO/dpo3/bin:/home/cork/FIT/DPO/dpo3/lib/junit-4.9.jar:/usr/share/java/junit.jar:/usr/share/java/ant-launcher.jar:/usr/share/java/ant.jar:/usr/share/java/ant/ant-junit.jar:/usr/share/java/ant/ant-junit4.jar" />
+    <property name="env.XDG_SESSION_ID" value="2" />
+    <property name="env.CVS_RSH" value="ssh" />
+    <property name="env.XFILESEARCHPATH" value="/usr/dt/app-defaults/%L/Dt" />
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification" />
     <property name="ant.file.type" value="file" />
-    <property name="java.vm.specification.version" value="1.0" />
+    <property name="java.vm.specification.version" value="1.7" />
     <property name="sun.cpu.endian" value="little" />
     <property name="sun.os.patch.level" value="unknown" />
-    <property name="env.HOME" value="/home/kursjan" />
+    <property name="env.HOME" value="/home/cork" />
     <property name="debuglevel" value="source,lines,vars" />
-    <property name="env.LS_COLORS" value="rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arj=01;31:*.taz=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lz=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.rar=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.axv=01;35:*.anx=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.axa=00;36:*.oga=00;36:*.spx=00;36:*.xspf=00;36:" />
-    <property name="env.LD_LIBRARY_PATH" value="/usr/lib/jvm/java-6-openjdk/jre/lib/i386/server:/usr/lib/jvm/java-6-openjdk/jre/lib/i386:/usr/lib/jvm/java-6-openjdk/jre/../lib/i386" />
     <property name="java.io.tmpdir" value="/tmp" />
-    <property name="java.vendor.url.bug" value="http://java.sun.com/cgi-bin/bugreport.cgi" />
-    <property name="env.VISUALWORKS" value="/home/honza2/vw7.7nc" />
-    <property name="env.SSH_AUTH_SOCK" value="/tmp/keyring-TPrClY/ssh" />
+    <property name="env.LS_COLORS" value="rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=01;05;37;41:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arj=01;31:*.taz=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lz=01;31:*.xz=01;31:*.bz2=01;31:*.tbz=01;31:*.tbz2=01;31:*.bz=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.axv=01;35:*.anx=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=01;36:*.au=01;36:*.flac=01;36:*.mid=01;36:*.midi=01;36:*.mka=01;36:*.mp3=01;36:*.mpc=01;36:*.ogg=01;36:*.ra=01;36:*.wav=01;36:*.axa=01;36:*.oga=01;36:*.spx=01;36:*.xspf=01;36:*.pdf=00;33:*.ps=00;33:*.ps.gz=00;33:*.txt=00;33:*.patch=00;33:*.diff=00;33:*.log=00;33:*.tex=00;33:*.xls=00;33:*.xlsx=00;33:*.ppt=00;33:*.pptx=00;33:*.rtf=00;33:*.doc=00;33:*.docx=00;33:*.odt=00;33:*.ods=00;33:*.odp=00;33:*.xml=00;33:*.epub=00;33:*.abw=00;33:*.htm=00;33:*.html=00;33:*.shtml=00;33:*.wpd=00;33:" />
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/" />
+    <property name="env.SSH_AUTH_SOCK" value="/run/user/cork/keyring-o3yr7h/ssh" />
     <property name="java.awt.graphicsenv" value="sun.awt.X11GraphicsEnvironment" />
-    <property name="os.arch" value="i386" />
-    <property name="java.ext.dirs" value="/usr/lib/jvm/java-6-openjdk/jre/lib/ext:/usr/java/packages/lib/ext" />
-    <property name="user.dir" value="/home/kursjan/Documents/eclipse/dpo_ws/2011_pr_composite_builder_iterator" />
-    <property name="env.XAUTHORITY" value="/var/run/gdm/auth-for-kursjan-AGn5r1/database" />
-    <property name="env.MANDATORY_PATH" value="/usr/share/gconf/xsession.mandatory.path" />
-    <property name="env.SPEECHD_PORT" value="7560" />
-    <property name="env.GTK_MODULES" value="canberra-gtk-module:canberra-gtk-module" />
-    <property name="line.separator" value="
-" />
-    <property name="java.vm.name" value="OpenJDK Server VM" />
-    <property name="basedir" value="/home/kursjan/Documents/eclipse/dpo_ws/2011_pr_composite_builder_iterator" />
-    <property name="ant.java.version" value="1.6" />
-    <property name="env.ORBIT_SOCKETDIR" value="/tmp/orbit-kursjan" />
-    <property name="ant.core.lib" value="/usr/share/ant/lib/ant.jar" />
-    <property name="env.USERNAME" value="kursjan" />
-    <property name="source" value="1.6" />
+    <property name="os.arch" value="amd64" />
+    <property name="java.ext.dirs" value="/usr/lib/jvm/java-1.7.0-openjdk-1.7.0.9.x86_64/jre/lib/ext:/usr/java/packages/lib/ext" />
+    <property name="env.XDG_RUNTIME_DIR" value="/run/user/cork" />
+    <property name="user.dir" value="/home/cork/FIT/DPO/dpo3" />
+    <property name="env.XAUTHORITY" value="/var/run/gdm/auth-for-cork-sUDHIm/database" />
+    <property name="line.separator" value="&#xa;" />
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM" />
+    <property name="env.LC_NUMERIC" value="cs_CZ.utf8" />
+    <property name="env.COLORTERM" value="gnome-terminal" />
+    <property name="basedir" value="/home/cork/FIT/DPO/dpo3" />
+    <property name="env.CCACHE_HASHDIR" value="" />
+    <property name="ant.java.version" value="1.7" />
+    <property name="ant.core.lib" value="/usr/share/java/ant.jar" />
+    <property name="env.USERNAME" value="cork" />
+    <property name="env.LC_TIME" value="cs_CZ.utf8" />
+    <property name="source" value="1.7" />
     <property name="file.encoding" value="UTF-8" />
-    <property name="env.GPG_AGENT_INFO" value="/tmp/keyring-TPrClY/gpg:0:1" />
-    <property name="java.specification.version" value="1.6" />
-    <property name="env.GNOME_KEYRING_CONTROL" value="/tmp/keyring-TPrClY" />
-    <property name="env.XDG_CONFIG_DIRS" value="/etc/xdg/xdg-xsession:/etc/xdg" />
+    <property name="env.MAIL" value="/var/spool/mail/cork" />
+    <property name="env.GPG_AGENT_INFO" value="/run/user/cork/keyring-o3yr7h/gpg:0:1" />
+    <property name="java.specification.version" value="1.7" />
+    <property name="env.GNOME_KEYRING_CONTROL" value="/run/user/cork/keyring-o3yr7h" />
     <property name="ant.project.invoked-targets" value="src-test" />
-    <property name="env.STX_MAKEFILES" value="/home/honza2/doc/skola/stx_buildtree/jv+mop/stx/makefiles" />
-    <property name="env.LESSCLOSE" value="/usr/bin/lesspipe %s %s" />
+    <property name="ant.file.dpo3" value="/home/cork/FIT/DPO/dpo3/build.xml" />
   </properties>
-  <testcase classname="cvut.fit.dpo.pr2.ArithmeticExpressionCreatorTest" name="testCreateExpression1" time="0.005" />
-  <testcase classname="cvut.fit.dpo.pr2.ArithmeticExpressionCreatorTest" name="testCreateExpression2" time="0.0" />
-  <testcase classname="cvut.fit.dpo.pr2.ArithmeticExpressionCreatorTest" name="testCreateExpressionFromRPN1" time="0.008">
-    <error message="Don&apos;t know how to do it :(" type="java.lang.UnsupportedOperationException">java.lang.UnsupportedOperationException: Don&apos;t know how to do it :(
-	at cvut.fit.dpo.pr2.ArithmeticExpressionCreator.createExpressionFromRPN(ArithmeticExpressionCreator.java:72)
-	at cvut.fit.dpo.pr2.ArithmeticExpressionCreatorTest.testCreateExpressionFromRPN1(ArithmeticExpressionCreatorTest.java:28)
-</error>
-  </testcase>
-  <testcase classname="cvut.fit.dpo.pr2.ArithmeticExpressionCreatorTest" name="testCreateExpressionFromRPN2" time="0.002">
-    <error message="Don&apos;t know how to do it :(" type="java.lang.UnsupportedOperationException">java.lang.UnsupportedOperationException: Don&apos;t know how to do it :(
-	at cvut.fit.dpo.pr2.ArithmeticExpressionCreator.createExpressionFromRPN(ArithmeticExpressionCreator.java:72)
-	at cvut.fit.dpo.pr2.ArithmeticExpressionCreatorTest.testCreateExpressionFromRPN2(ArithmeticExpressionCreatorTest.java:45)
-</error>
-  </testcase>
-  <testcase classname="cvut.fit.dpo.pr2.ArithmeticExpressionCreatorTest" name="testCreateExpressionFromRPN3" time="0.001">
-    <error message="Unexpected exception, expected&lt;java.lang.IllegalArgumentException&gt; but was&lt;java.lang.UnsupportedOperationException&gt;" type="java.lang.Exception">java.lang.Exception: Unexpected exception, expected&lt;java.lang.IllegalArgumentException&gt; but was&lt;java.lang.UnsupportedOperationException&gt;
-Caused by: java.lang.UnsupportedOperationException: Don&apos;t know how to do it :(
-	at cvut.fit.dpo.pr2.ArithmeticExpressionCreator.createExpressionFromRPN(ArithmeticExpressionCreator.java:72)
-	at cvut.fit.dpo.pr2.ArithmeticExpressionCreatorTest.testCreateExpressionFromRPN3(ArithmeticExpressionCreatorTest.java:53)
-</error>
-  </testcase>
-  <testcase classname="cvut.fit.dpo.pr2.ArithmeticExpressionCreatorTest" name="testCreateExpressionFromRPN4" time="0.01">
-    <error message="Unexpected exception, expected&lt;java.lang.IllegalArgumentException&gt; but was&lt;java.lang.UnsupportedOperationException&gt;" type="java.lang.Exception">java.lang.Exception: Unexpected exception, expected&lt;java.lang.IllegalArgumentException&gt; but was&lt;java.lang.UnsupportedOperationException&gt;
-Caused by: java.lang.UnsupportedOperationException: Don&apos;t know how to do it :(
-	at cvut.fit.dpo.pr2.ArithmeticExpressionCreator.createExpressionFromRPN(ArithmeticExpressionCreator.java:72)
-	at cvut.fit.dpo.pr2.ArithmeticExpressionCreatorTest.testCreateExpressionFromRPN4(ArithmeticExpressionCreatorTest.java:64)
-</error>
-  </testcase>
+  <testcase classname="cvut.fit.dpo.pr2.ArithmeticExpressionCreatorTest" name="testCreateExpression2" time="0.005" />
+  <testcase classname="cvut.fit.dpo.pr2.ArithmeticExpressionCreatorTest" name="testCreateExpressionFromRPN1" time="0.0" />
+  <testcase classname="cvut.fit.dpo.pr2.ArithmeticExpressionCreatorTest" name="testCreateExpression1" time="0.0" />
+  <testcase classname="cvut.fit.dpo.pr2.ArithmeticExpressionCreatorTest" name="testCreateExpressionFromRPN2" time="0.001" />
+  <testcase classname="cvut.fit.dpo.pr2.ArithmeticExpressionCreatorTest" name="testCreateExpressionFromRPN3" time="0.001" />
+  <testcase classname="cvut.fit.dpo.pr2.ArithmeticExpressionCreatorTest" name="testCreateExpressionFromRPN4" time="0.0" />
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

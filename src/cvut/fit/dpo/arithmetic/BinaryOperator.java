@@ -24,7 +24,6 @@ public abstract class BinaryOperator
 		setSecondOperand(secondOperand);
 	}
 	
-	
 	void setFirstOperand(Object o)
 	{
 		firstOperand = o;
