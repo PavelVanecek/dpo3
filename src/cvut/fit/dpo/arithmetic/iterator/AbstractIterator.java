@@ -25,23 +25,7 @@ public abstract class AbstractIterator implements Iterator<ExpressionElement> {
 	}
 	
 	protected ExpressionElement operation(BinaryOperator operator) {
-		
-		if (operator instanceof AddOperator) {
-			return new AddOperation();
-		}
-		if (operator instanceof SubstractOperator) {
-			return new SubstractOperation();
-		}
-
-		// EmptyOperator or unrecognized element
-		// if (element instanceof EmptyOperator)
-		return new ExpressionElement() {
-
-			@Override
-			public String stringValue() {
-				return "";
-			}
-		};
+		return operator.getExpression();
 
 	}
 	

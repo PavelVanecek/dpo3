@@ -1,5 +1,6 @@
 package cvut.fit.dpo.arithmetic;
 
+import cvut.fit.dpo.arithmetic.elements.ExpressionElement;
 import cvut.fit.dpo.arithmetic.iterator.InOrderIterator;
 import cvut.fit.dpo.arithmetic.iterator.PostOrderIterator;
 
@@ -15,12 +16,14 @@ public abstract class BinaryOperator
 	private Object secondOperand;
 
 	protected abstract Integer evaluate(Integer val1, Integer val2);
+	public abstract ExpressionElement getExpression();
 	
 	public BinaryOperator(Object firstOperand, Object secondOperand)
 	{
 		setFirstOperand(firstOperand);
 		setSecondOperand(secondOperand);
 	}
+	
 	
 	void setFirstOperand(Object o)
 	{
