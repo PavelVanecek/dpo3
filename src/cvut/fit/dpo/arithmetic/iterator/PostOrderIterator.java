@@ -10,8 +10,7 @@ public class PostOrderIterator extends AbstractIterator {
 	private enum State {
 		LEFT_OPERAND,
 		RIGHT_OPERAND,
-		OPERATOR,
-		DONE
+		OPERATOR
 	}
 	
 	private State nextState;
@@ -22,16 +21,7 @@ public class PostOrderIterator extends AbstractIterator {
 	}
 
 	@Override
-	public boolean hasNext() {
-		return this.nextState != State.DONE;
-	}
-
-	@Override
-	public ExpressionElement next()	{
-		
-		if (this.innerIterator != null && this.innerIterator.hasNext()) {
-			return this.innerIterator.next();
-		}
+	public ExpressionElement protectedNext()	{
 		
 		switch (this.nextState) {
 		case LEFT_OPERAND:
@@ -56,7 +46,7 @@ public class PostOrderIterator extends AbstractIterator {
 			
 			return new Number(((NumericOperand) secondOperand).getValue());
 		case OPERATOR:
-			this.nextState = State.DONE;
+			this.hasNext = false;
 			return operation(operator);
 		default:
 			break;

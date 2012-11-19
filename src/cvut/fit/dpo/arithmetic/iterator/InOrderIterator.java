@@ -1,7 +1,6 @@
 package cvut.fit.dpo.arithmetic.iterator;
 
 import cvut.fit.dpo.arithmetic.BinaryOperator;
-import cvut.fit.dpo.arithmetic.EmptyOperator;
 import cvut.fit.dpo.arithmetic.elements.CloseBracketOperation;
 import cvut.fit.dpo.arithmetic.elements.ExpressionElement;
 import cvut.fit.dpo.arithmetic.elements.OpenBracketOperation;
@@ -9,7 +8,7 @@ import cvut.fit.dpo.arithmetic.elements.OpenBracketOperation;
 public class InOrderIterator extends AbstractIterator {
 
 	private enum State {
-		LEFT_BRACKET, LEFT_OPERAND, OPERATOR, RIGHT_OPERAND, RIGHT_BRACKET, DONE
+		LEFT_BRACKET, LEFT_OPERAND, OPERATOR, RIGHT_OPERAND, RIGHT_BRACKET
 	}
 
 	/**
@@ -26,22 +25,7 @@ public class InOrderIterator extends AbstractIterator {
 	}
 
 	@Override
-	public boolean hasNext() {
-		return this.nextState != State.DONE;
-	}
-
-	@Override
-	public ExpressionElement next() {
-		
-		if (this.operator instanceof EmptyOperator) {
-			// empty operator has only the left element;
-			this.nextState = State.DONE;
-			return number(this.operator.getFirstOperand());
-		}
-		
-		if (this.innerIterator != null && this.innerIterator.hasNext()) {
-			return this.innerIterator.next();
-		}
+	protected ExpressionElement protectedNext() {
 		
 		switch (this.nextState) {
 		case LEFT_BRACKET:
@@ -67,7 +51,7 @@ public class InOrderIterator extends AbstractIterator {
 			}
 			return this.number(secondOperand);
 		case RIGHT_BRACKET:
-			this.nextState = State.DONE;
+			this.hasNext = false;
 			return new CloseBracketOperation();
 		default:
 			break;
