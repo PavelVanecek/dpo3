@@ -1,5 +1,8 @@
 package cvut.fit.dpo.arithmetic;
 
+import cvut.fit.dpo.arithmetic.elements.AddOperation;
+import cvut.fit.dpo.arithmetic.elements.ExpressionElement;
+
 /**
  * Represents + operation
  * 
@@ -18,6 +21,11 @@ public class AddOperator extends BinaryOperator
 	protected Integer evaluate(Integer val1, Integer val2)
 	{
 		return val1 + val2;
+	}
+
+	@Override
+	public ExpressionElement getExpression() {
+		return new AddOperation();
 	}
 
 }
