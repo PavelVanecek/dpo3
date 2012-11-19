@@ -1,5 +1,7 @@
 package cvut.fit.dpo.pr2;
-
+/**
+ * @author povalpet
+ */
 import cvut.fit.dpo.arithmetic.ArithmeticExpression;
 
  abstract public class ArithmeticExpressionBuilder {
