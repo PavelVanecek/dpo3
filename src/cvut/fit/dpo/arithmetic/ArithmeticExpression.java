@@ -1,7 +1,8 @@
 package cvut.fit.dpo.arithmetic;
 
-import cvut.fit.dpo.arithmetic.iterator.InOrderIterator;
-import cvut.fit.dpo.arithmetic.iterator.PostOrderIterator;
+import java.util.Iterator;
+
+import cvut.fit.dpo.arithmetic.elements.ExpressionElement;
 
 public class ArithmeticExpression
 {
@@ -32,7 +33,7 @@ public class ArithmeticExpression
 	 * 
 	 * @return Iterator<ExpressionElement>
 	 */
-	public InOrderIterator getInOrderIterator()
+	public Iterator<ExpressionElement> getInOrderIterator()
 	{
 		return this.root.inOrderIterator();
 	}
@@ -44,7 +45,7 @@ public class ArithmeticExpression
 	 * 
 	 * @return
 	 */
-	public PostOrderIterator getPostOrderIterator()
+	public Iterator<ExpressionElement> getPostOrderIterator()
 	{
 		return this.root.postOrderIterator();
 	}

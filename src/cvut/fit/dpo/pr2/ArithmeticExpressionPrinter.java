@@ -1,12 +1,9 @@
 package cvut.fit.dpo.pr2;
 
-import cvut.fit.dpo.arithmetic.AddOperator;
+import java.util.Iterator;
+
 import cvut.fit.dpo.arithmetic.ArithmeticExpression;
-import cvut.fit.dpo.arithmetic.BinaryOperator;
-import cvut.fit.dpo.arithmetic.NumericOperand;
-import cvut.fit.dpo.arithmetic.SubstractOperator;
-import cvut.fit.dpo.arithmetic.iterator.InOrderIterator;
-import cvut.fit.dpo.arithmetic.iterator.PostOrderIterator;
+import cvut.fit.dpo.arithmetic.elements.ExpressionElement;
 
 /**
  * Printer for {@link ArithmeticExpression}s. It can print
@@ -44,7 +41,7 @@ public class ArithmeticExpressionPrinter
 		// Remember, do not use the getRoot() method!
 		// The iterator may help :)
 		StringBuffer buffer = new StringBuffer();
-		InOrderIterator iterator = this.expression.getInOrderIterator();
+		Iterator<ExpressionElement> iterator = this.expression.getInOrderIterator();
 		
 		while (iterator.hasNext()) {
 			String n = iterator.next().stringValue();
@@ -67,7 +64,7 @@ public class ArithmeticExpressionPrinter
 		// Remember, do not use the getRoot() method!
 		// The iterator may help :)
 		StringBuffer buffer = new StringBuffer();
-		PostOrderIterator iterator = this.expression.getPostOrderIterator();
+		Iterator<ExpressionElement> iterator = this.expression.getPostOrderIterator();
 		
 		while (iterator.hasNext()) {
 			String n = iterator.next().stringValue();

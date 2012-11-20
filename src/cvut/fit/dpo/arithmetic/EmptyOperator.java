@@ -1,7 +1,10 @@
 package cvut.fit.dpo.arithmetic;
 
+import java.util.Iterator;
+
 import cvut.fit.dpo.arithmetic.elements.ExpressionElement;
 import cvut.fit.dpo.arithmetic.elements.Number;
+import cvut.fit.dpo.arithmetic.iterator.SingleValueIterator;
 
 
 public class EmptyOperator extends BinaryOperator {
@@ -23,6 +26,19 @@ public class EmptyOperator extends BinaryOperator {
 	@Override
 	public ExpressionElement getExpression() {
 		return new Number(getValue());
+	}
+	
+	/**
+	 * EmptyOperator handles expressions differently
+	 */
+	public Iterator<ExpressionElement> inOrderIterator()
+	{
+		return new SingleValueIterator(getValue());
+	}
+
+	public Iterator<ExpressionElement> postOrderIterator()
+	{
+		return new SingleValueIterator(getValue());
 	}
 
 }

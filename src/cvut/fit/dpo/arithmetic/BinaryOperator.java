@@ -1,5 +1,8 @@
 package cvut.fit.dpo.arithmetic;
 
+import java.util.Iterator;
+
+import cvut.fit.dpo.arithmetic.elements.ExpressionElement;
 import cvut.fit.dpo.arithmetic.iterator.InOrderIterator;
 import cvut.fit.dpo.arithmetic.iterator.PostOrderIterator;
 
@@ -52,12 +55,12 @@ public abstract class BinaryOperator implements Operand {
 		return this.evaluate();
 	}
 	
-	public InOrderIterator inOrderIterator()
+	public Iterator<ExpressionElement> inOrderIterator()
 	{
 		return new InOrderIterator(this);
 	}
 
-	public PostOrderIterator postOrderIterator()
+	public Iterator<ExpressionElement> postOrderIterator()
 	{
 		return new PostOrderIterator(this);
 	}
