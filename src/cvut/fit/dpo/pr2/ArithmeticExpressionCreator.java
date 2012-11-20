@@ -1,11 +1,6 @@
 package cvut.fit.dpo.pr2;
 
-import cvut.fit.dpo.arithmetic.AddOperator;
 import cvut.fit.dpo.arithmetic.ArithmeticExpression;
-import cvut.fit.dpo.arithmetic.BinaryOperator;
-import cvut.fit.dpo.arithmetic.NumericOperand;
-import cvut.fit.dpo.arithmetic.SubstractOperator;
-
 
 /**
  * Stupid class which can create some {@link ArithmeticExpression}s.

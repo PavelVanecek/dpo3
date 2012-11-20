@@ -17,34 +17,8 @@ public class ArithmeticExpressionFromRPNBuilder extends ArithmeticExpressionBuil
 
 	@Override
 	public void buildExpression() {
-		if(this.buildString.length() == 0) {
-			throw new IllegalArgumentException();
-		}
-		for(int i = 0; i < this.buildString.length(); i++) {
-			char ch = this.buildString.charAt(i);
-			if(Character.isDigit(ch)) {
-				NumericOperand operand = new NumericOperand(Character.getNumericValue(ch));
-				this.stack.push(operand);
-			} else {
-				String operator = Character.toString(ch);
-				if(operator.equals("+")) {
-					Object op1 = this.stack.pop();
-					Object op2 = this.stack.pop();
-					
-					AddOperator addOperator = new AddOperator(op2, op1);
-					this.stack.push(addOperator);
-				} else if(operator.equals("-")) {
-					Object op1 = this.stack.pop();
-					Object op2 = this.stack.pop();
-					
-					SubstractOperator subtractOperator = new SubstractOperator(op2,op1);
-					this.stack.push(subtractOperator);
-				} else if(!operator.equals(" ")){
-					throw new IllegalArgumentException();
-				}
-				
-			}
-		}
+		this.parse();
+		
 		Object operator = this.stack.pop();
 		if(operator instanceof BinaryOperator) {
 			this.expression.setRoot((BinaryOperator) operator);
@@ -53,6 +27,35 @@ public class ArithmeticExpressionFromRPNBuilder extends ArithmeticExpressionBuil
 			this.expression.setRoot(op);
 		}
 		
+	}
+
+	@Override
+	protected void buildPlus() {
+		Object op1 = this.stack.pop();
+		Object op2 = this.stack.pop();
+		
+		AddOperator addOperator = new AddOperator(op2, op1);
+		this.stack.push(addOperator);
+	}
+
+	@Override
+	protected void buildMinus() {
+		Object op1 = this.stack.pop();
+		Object op2 = this.stack.pop();
+		
+		SubstractOperator subtractOperator = new SubstractOperator(op2,op1);
+		this.stack.push(subtractOperator);		
+	}
+
+	@Override
+	protected void buildDigit(char ch) {
+		NumericOperand operand = new NumericOperand(Character.getNumericValue(ch));
+		this.stack.push(operand);		
+	}
+
+	@Override
+	protected void buildBracket(String bracket) {
+		throw new UnsupportedOperationException();
 	}
 
 }

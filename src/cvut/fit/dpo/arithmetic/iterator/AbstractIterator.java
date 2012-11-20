@@ -2,11 +2,7 @@ package cvut.fit.dpo.arithmetic.iterator;
 
 import java.util.Iterator;
 
-import cvut.fit.dpo.arithmetic.BinaryOperator;
-import cvut.fit.dpo.arithmetic.EmptyOperator;
-import cvut.fit.dpo.arithmetic.NumericOperand;
-import cvut.fit.dpo.arithmetic.elements.ExpressionElement;
-import cvut.fit.dpo.arithmetic.elements.Number;
+import cvut.fit.dpo.arithmetic.elements.*;
 
 public abstract class AbstractIterator implements Iterator<ExpressionElement> {
 	
