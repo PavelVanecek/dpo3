@@ -1,6 +1,7 @@
 package cvut.fit.dpo.arithmetic.iterator;
 
 import cvut.fit.dpo.arithmetic.BinaryOperator;
+import cvut.fit.dpo.arithmetic.Operand;
 import cvut.fit.dpo.arithmetic.elements.CloseBracketOperation;
 import cvut.fit.dpo.arithmetic.elements.ExpressionElement;
 import cvut.fit.dpo.arithmetic.elements.OpenBracketOperation;
@@ -39,25 +40,19 @@ public class InOrderIterator extends AbstractIterator {
 			
 		case LEFT_OPERAND:
 			this.nextState = State.OPERATOR;
-			Object firstOperand = operator.getFirstOperand();
-			if (firstOperand instanceof BinaryOperator) {
-				this.innerIterator = ((BinaryOperator) firstOperand).inOrderIterator();
-				return this.innerIterator.next();
-			}
-			return this.number(firstOperand);
+			Operand firstOperand = operator.getFirstOperand();
+			this.innerIterator = firstOperand.inOrderIterator();
+			return this.innerIterator.next();
 			
 		case OPERATOR:
 			this.nextState = State.RIGHT_OPERAND;
-			return this.operation(operator);
+			return operator.getExpression();
 			
 		case RIGHT_OPERAND:
 			this.nextState = State.RIGHT_BRACKET;
-			Object secondOperand = operator.getSecondOperand();
-			if (secondOperand instanceof BinaryOperator) {
-				this.innerIterator = ((BinaryOperator) secondOperand).inOrderIterator();
-				return this.innerIterator.next();
-			}
-			return this.number(secondOperand);
+			Operand secondOperand = operator.getSecondOperand();
+			this.innerIterator = secondOperand.inOrderIterator();
+			return this.innerIterator.next();
 			
 		case RIGHT_BRACKET:
 			this.hasNext = false;

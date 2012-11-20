@@ -2,11 +2,12 @@ package cvut.fit.dpo.arithmetic.iterator;
 
 import java.util.Iterator;
 
-import cvut.fit.dpo.arithmetic.elements.*;
+import cvut.fit.dpo.arithmetic.BinaryOperator;
+import cvut.fit.dpo.arithmetic.elements.ExpressionElement;
 
 public abstract class AbstractIterator implements Iterator<ExpressionElement> {
 	
-	protected AbstractIterator innerIterator;
+	protected Iterator<ExpressionElement> innerIterator;
 	protected BinaryOperator operator;
 	protected boolean hasNext;
 	
@@ -16,26 +17,12 @@ public abstract class AbstractIterator implements Iterator<ExpressionElement> {
 		this.innerIterator = null;
 	}
 	
-	protected Number number(Object operand) {
-		return new Number(((NumericOperand)operand).getValue());
-	}
-	
 	public boolean hasNext() {
 		return this.hasNext;
 	}
 	
-	protected ExpressionElement operation(BinaryOperator operator) {
-		return operator.getExpression();
-	}
-	
 	@Override
 	public ExpressionElement next() {
-		
-		if (this.operator instanceof EmptyOperator) {
-			// empty operator has only the left element;
-			this.hasNext = false;
-			return number(this.operator.getFirstOperand());
-		}
 		
 		if (this.innerIterator != null && this.innerIterator.hasNext()) {
 			return this.innerIterator.next();
