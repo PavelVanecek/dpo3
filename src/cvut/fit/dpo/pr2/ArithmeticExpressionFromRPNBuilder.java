@@ -55,7 +55,7 @@ public class ArithmeticExpressionFromRPNBuilder extends ArithmeticExpressionBuil
 
 	@Override
 	protected void buildBracket(String bracket) {
-		throw new UnsupportedOperationException();
+		throw new IllegalArgumentException();
 	}
 
 }

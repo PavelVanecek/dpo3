@@ -40,7 +40,9 @@ import cvut.fit.dpo.arithmetic.ArithmeticExpression;
 						this.buildMinus();
 					} else if (operator.equals("(") || operator.equals(")")) {
 						this.buildBracket(operator);
-					} else if(!operator.equals(" ")){
+					} else if(operator.equals(" ")){ 
+						continue;
+					} else {
 						throw new IllegalArgumentException();
 					}
 					
