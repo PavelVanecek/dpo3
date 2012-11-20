@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="0" failures="0" hostname="corkscreewe.buk.cvut.cz" name="cvut.fit.dpo.pr2.ArithmeticExpressionPrinterTest" tests="8" time="0.068" timestamp="2012-11-19T23:48:44">
+<testsuite errors="0" failures="0" hostname="corkscreewe.buk.cvut.cz" name="cvut.fit.dpo.pr2.ArithmeticExpressionPrinterTest" tests="8" time="0.075" timestamp="2012-11-20T00:09:27">
   <properties>
     <property name="java.vendor" value="Oracle Corporation" />
     <property name="env.SESSION_MANAGER" value="local/unix:@/tmp/.ICE-unix/1319,unix/unix:/tmp/.ICE-unix/1319" />
@@ -83,7 +83,7 @@
     <property name="env.XDG_SEAT" value="seat0" />
     <property name="java.runtime.name" value="OpenJDK Runtime Environment" />
     <property name="ant.version" value="Apache Ant(TM) version 1.8.3 compiled on February 29 2012" />
-    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner cvut.fit.dpo.pr2.ArithmeticExpressionPrinterTest filtertrace=true haltOnError=false haltOnFailure=false formatter=org.apache.tools.ant.taskdefs.optional.junit.OutErrSummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/home/cork/FIT/DPO/dpo3/junit/TEST-cvut.fit.dpo.pr2.ArithmeticExpressionPrinterTest.xml crashfile=/home/cork/FIT/DPO/dpo3/junitvmwatcher1506550623267360923.properties propsfile=/home/cork/FIT/DPO/dpo3/junit2331673827319097802.properties" />
+    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner cvut.fit.dpo.pr2.ArithmeticExpressionPrinterTest filtertrace=true haltOnError=false haltOnFailure=false formatter=org.apache.tools.ant.taskdefs.optional.junit.OutErrSummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/home/cork/FIT/DPO/dpo3/junit/TEST-cvut.fit.dpo.pr2.ArithmeticExpressionPrinterTest.xml crashfile=/home/cork/FIT/DPO/dpo3/junitvmwatcher3305595408416800032.properties propsfile=/home/cork/FIT/DPO/dpo3/junit6600223683439601250.properties" />
     <property name="java.class.path" value="/home/cork/FIT/DPO/dpo3/bin:/home/cork/FIT/DPO/dpo3/lib/junit-4.9.jar:/usr/share/java/junit.jar:/usr/share/java/ant-launcher.jar:/usr/share/java/ant.jar:/usr/share/java/ant/ant-junit.jar:/usr/share/java/ant/ant-junit4.jar" />
     <property name="env.XDG_SESSION_ID" value="2" />
     <property name="env.CVS_RSH" value="ssh" />
@@ -125,13 +125,13 @@
     <property name="ant.file.dpo3" value="/home/cork/FIT/DPO/dpo3/build.xml" />
   </properties>
   <testcase classname="cvut.fit.dpo.pr2.ArithmeticExpressionPrinterTest" name="testPrintInOrder2" time="0.008" />
-  <testcase classname="cvut.fit.dpo.pr2.ArithmeticExpressionPrinterTest" name="testPrintInOrder3" time="0.0" />
+  <testcase classname="cvut.fit.dpo.pr2.ArithmeticExpressionPrinterTest" name="testPrintInOrder3" time="0.001" />
+  <testcase classname="cvut.fit.dpo.pr2.ArithmeticExpressionPrinterTest" name="testPrintInOrder1" time="0.0" />
   <testcase classname="cvut.fit.dpo.pr2.ArithmeticExpressionPrinterTest" name="testPrintInOrder4" time="0.0" />
   <testcase classname="cvut.fit.dpo.pr2.ArithmeticExpressionPrinterTest" name="testPrintPostOrder1" time="0.001" />
-  <testcase classname="cvut.fit.dpo.pr2.ArithmeticExpressionPrinterTest" name="testPrintPostOrder2" time="0.0" />
+  <testcase classname="cvut.fit.dpo.pr2.ArithmeticExpressionPrinterTest" name="testPrintPostOrder2" time="0.001" />
   <testcase classname="cvut.fit.dpo.pr2.ArithmeticExpressionPrinterTest" name="testPrintPostOrder3" time="0.0" />
   <testcase classname="cvut.fit.dpo.pr2.ArithmeticExpressionPrinterTest" name="testPrintPostOrder4" time="0.0" />
-  <testcase classname="cvut.fit.dpo.pr2.ArithmeticExpressionPrinterTest" name="testPrintInOrder1" time="0.0" />
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

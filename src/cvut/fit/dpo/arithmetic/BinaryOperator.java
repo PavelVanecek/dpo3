@@ -1,6 +1,5 @@
 package cvut.fit.dpo.arithmetic;
 
-import cvut.fit.dpo.arithmetic.elements.ExpressionElement;
 import cvut.fit.dpo.arithmetic.iterator.InOrderIterator;
 import cvut.fit.dpo.arithmetic.iterator.PostOrderIterator;
 
@@ -10,45 +9,47 @@ import cvut.fit.dpo.arithmetic.iterator.PostOrderIterator;
  * @author Jan Kurš
  *
  */
-public abstract class BinaryOperator
-{
-	private Object firstOperand;
-	private Object secondOperand;
+public abstract class BinaryOperator implements Operand {
+	private Operand firstOperand;
+	private Operand secondOperand;
 
 	protected abstract Integer evaluate(Integer val1, Integer val2);
-	public abstract ExpressionElement getExpression();
 	
-	public BinaryOperator(Object firstOperand, Object secondOperand)
+	public BinaryOperator(Operand firstOperand, Operand secondOperand)
 	{
 		setFirstOperand(firstOperand);
 		setSecondOperand(secondOperand);
 	}
 	
-	void setFirstOperand(Object o)
+	void setFirstOperand(Operand o)
 	{
 		firstOperand = o;
 	}
-	void setSecondOperand(Object o)
+	void setSecondOperand(Operand o)
 	{
 		secondOperand = o;
 	}
 	
-	public Object getFirstOperand()
+	public Operand getFirstOperand()
 	{
 		return firstOperand;
 	}
 	
-	public Object getSecondOperand()
+	public Operand getSecondOperand()
 	{
 		return secondOperand;
 	}
 	
 	public Integer evaluate()
 	{
-		int val1 = getOperandValue(firstOperand);
-		int val2 = getOperandValue(secondOperand);
+		int val1 = firstOperand.getValue();
+		int val2 = secondOperand.getValue();
 		
 		return evaluate(val1, val2);
+	}
+	
+	public Integer getValue() {
+		return this.evaluate();
 	}
 	
 	public InOrderIterator inOrderIterator()
@@ -60,22 +61,5 @@ public abstract class BinaryOperator
 	{
 		return new PostOrderIterator(this);
 	}
-	
-	
-	private Integer getOperandValue(Object o)
-	{
-		if (o instanceof NumericOperand)
-		{
-			return ((NumericOperand)o).getValue();
-		}
-		
-		if (o instanceof BinaryOperator)
-		{
-			return ((BinaryOperator)o).evaluate();
-		}
-		
-		throw new IllegalArgumentException("Unsuported operand type!");
-	}
-
 	
 }

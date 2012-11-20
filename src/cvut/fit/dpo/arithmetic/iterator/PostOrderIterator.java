@@ -24,27 +24,26 @@ public class PostOrderIterator extends AbstractIterator {
 	public ExpressionElement protectedNext()	{
 		
 		switch (this.nextState) {
+		
 		case LEFT_OPERAND:
 			nextState = State.RIGHT_OPERAND;			
 			Object firstOperand = operator.getFirstOperand();
-			
 			if (firstOperand instanceof BinaryOperator) {
 				this.innerIterator = ((BinaryOperator) firstOperand).postOrderIterator();
 				return this.innerIterator.next();
 			}
-			
 			// now, return the left again
 			return this.number(firstOperand);
+			
 		case RIGHT_OPERAND:
 			nextState = State.OPERATOR;
-			
 			Object secondOperand = operator.getSecondOperand(); 
 			if (secondOperand instanceof BinaryOperator) {
 				this.innerIterator = ((BinaryOperator) secondOperand).postOrderIterator();
 				return this.innerIterator.next();
 			}
-			
 			return new Number(((NumericOperand) secondOperand).getValue());
+			
 		case OPERATOR:
 			this.hasNext = false;
 			return operation(operator);

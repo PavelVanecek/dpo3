@@ -3,6 +3,7 @@ package cvut.fit.dpo.arithmetic;
 import cvut.fit.dpo.arithmetic.elements.ExpressionElement;
 import cvut.fit.dpo.arithmetic.elements.SubstractOperation;
 
+
 /**
  * Represents - operation
  * 
@@ -11,7 +12,7 @@ import cvut.fit.dpo.arithmetic.elements.SubstractOperation;
 public class SubstractOperator extends BinaryOperator
 {
 
-	public SubstractOperator(Object firstOperand, Object secondOperand)
+	public SubstractOperator(Operand firstOperand, Operand secondOperand)
 	{
 		super(firstOperand, secondOperand);
 	}

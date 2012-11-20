@@ -12,7 +12,7 @@ import cvut.fit.dpo.arithmetic.elements.ExpressionElement;
 public class AddOperator extends BinaryOperator
 {
 
-	public AddOperator(Object firstOperand, Object secondOperand)
+	public AddOperator(Operand firstOperand, Operand secondOperand)
 	{
 		super(firstOperand, secondOperand);
 	}

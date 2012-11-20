@@ -42,7 +42,6 @@ public abstract class AbstractIterator implements Iterator<ExpressionElement> {
 		}
 		
 		return this.protectedNext();
-		
 	}
 	
 	protected abstract ExpressionElement protectedNext();

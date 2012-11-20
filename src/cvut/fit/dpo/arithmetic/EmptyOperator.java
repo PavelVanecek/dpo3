@@ -3,9 +3,10 @@ package cvut.fit.dpo.arithmetic;
 import cvut.fit.dpo.arithmetic.elements.ExpressionElement;
 import cvut.fit.dpo.arithmetic.elements.Number;
 
+
 public class EmptyOperator extends BinaryOperator {
 
-	public EmptyOperator(Object firstOperand, Object secondOperand) {
+	public EmptyOperator(Operand firstOperand, Operand secondOperand) {
 		super(firstOperand, secondOperand);
 	}
 
@@ -15,8 +16,13 @@ public class EmptyOperator extends BinaryOperator {
 	}
 
 	@Override
+	public Integer getValue() {
+		return this.getFirstOperand().getValue();
+	}
+
+	@Override
 	public ExpressionElement getExpression() {
-		return new Number((Integer) this.getFirstOperand());
+		return new Number(getValue());
 	}
 
 }
