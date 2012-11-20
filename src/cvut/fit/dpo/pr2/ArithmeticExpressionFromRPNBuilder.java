@@ -12,14 +12,12 @@ import cvut.fit.dpo.arithmetic.SubstractOperator;
 public class ArithmeticExpressionFromRPNBuilder extends ArithmeticExpressionBuilder{
 	Stack<Operand> stack = new Stack<Operand>();
 	
-	public ArithmeticExpressionFromRPNBuilder(String input) {
-		super(input);
+	public ArithmeticExpressionFromRPNBuilder() {
+		super();
 	}
 
 	@Override
-	public void buildExpression() {
-		this.parse();
-		
+	public void buildExpression() {		
 		Operand operator = this.stack.pop();
 		if(operator instanceof BinaryOperator) {
 			this.expression.setRoot((BinaryOperator) operator);
@@ -31,7 +29,7 @@ public class ArithmeticExpressionFromRPNBuilder extends ArithmeticExpressionBuil
 	}
 
 	@Override
-	protected void buildPlus() {
+	public void buildPlus() {
 		Operand op1 = this.stack.pop();
 		Operand op2 = this.stack.pop();
 		
@@ -40,7 +38,7 @@ public class ArithmeticExpressionFromRPNBuilder extends ArithmeticExpressionBuil
 	}
 
 	@Override
-	protected void buildMinus() {
+	public void buildMinus() {
 		Operand op1 = this.stack.pop();
 		Operand op2 = this.stack.pop();
 		
@@ -49,13 +47,13 @@ public class ArithmeticExpressionFromRPNBuilder extends ArithmeticExpressionBuil
 	}
 
 	@Override
-	protected void buildDigit(char ch) {
+	public void buildDigit(char ch) {
 		NumericOperand operand = new NumericOperand(Character.getNumericValue(ch));
 		this.stack.push(operand);		
 	}
 
 	@Override
-	protected void buildBracket(String bracket) {
+	public void buildBracket(String bracket) {
 		throw new IllegalArgumentException();
 	}
 

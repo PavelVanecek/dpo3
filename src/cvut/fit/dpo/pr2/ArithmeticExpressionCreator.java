@@ -10,7 +10,6 @@ import cvut.fit.dpo.arithmetic.ArithmeticExpression;
  */
 public class ArithmeticExpressionCreator
 {
-	private ArithmeticExpressionBuilder expressionBuilder;
 	
 	/**
 	 * Creates 3 - (1 + 2)
@@ -21,11 +20,11 @@ public class ArithmeticExpressionCreator
 	public ArithmeticExpression createExpression1()
 	{
 		String input = "3 - (1 + 2)";
-		this.expressionBuilder = new ArithmeticExpressionFromInOrderBuilder(input);
 		
-		this.expressionBuilder.buildExpression();
-		
-		return this.expressionBuilder.getResult();
+		ArithmeticExpressionFromInOrderBuilder concretebuilder = new ArithmeticExpressionFromInOrderBuilder();
+		Director director = new Director(concretebuilder, input);
+		director.build();		
+		return concretebuilder.getResult();
 	}
 
 	/**
@@ -37,10 +36,10 @@ public class ArithmeticExpressionCreator
 	public ArithmeticExpression createExpression2()
 	{
 		String input = "(3 - 1) + 2";
-		this.expressionBuilder = new ArithmeticExpressionFromInOrderBuilder(input);
-		this.expressionBuilder.buildExpression();
-		
-		return this.expressionBuilder.getResult();
+		ArithmeticExpressionFromInOrderBuilder concretebuilder = new ArithmeticExpressionFromInOrderBuilder();
+		Director director = new Director(concretebuilder, input);
+		director.build();		
+		return concretebuilder.getResult();
 	}
 	
 	/**
@@ -54,9 +53,9 @@ public class ArithmeticExpressionCreator
 	 */
 	public ArithmeticExpression createExpressionFromRPN(String input)
 	{
-		this.expressionBuilder = new ArithmeticExpressionFromRPNBuilder(input);
-		this.expressionBuilder.buildExpression();
-		
-		return this.expressionBuilder.getResult();
+		ArithmeticExpressionFromRPNBuilder concretebuilder = new ArithmeticExpressionFromRPNBuilder();
+		Director director = new Director(concretebuilder, input);
+		director.build();		
+		return concretebuilder.getResult();
 	}
 }

@@ -13,45 +13,44 @@ public class ArithmeticExpressionFromInOrderBuilder extends
 	
 	ArithmeticExpressionFromRPNBuilder builder;
 	
-	public ArithmeticExpressionFromInOrderBuilder(String string) {
-		super(string);
+	public ArithmeticExpressionFromInOrderBuilder() {
+		super();
 	}
 
 	@Override
 	public void buildExpression() {
-		this.parse();		
 		while(!stack.isEmpty()) {
 			this.queue.add(stack.pop());
 		}
 		String s = "";
 		while(!this.queue.isEmpty()) {
 			s += (String) queue.remove();
-		}	
+		}			
 		
-		builder = new ArithmeticExpressionFromRPNBuilder(s);
-		builder.buildExpression();
-		
+		ArithmeticExpressionFromRPNBuilder builder = new ArithmeticExpressionFromRPNBuilder();
+		Director director = new Director(builder, s);
+		director.build();
 		this.expression = builder.getResult();
 	}
 
 	@Override
-	protected void buildPlus() {
+	public void buildPlus() {
 		this.stack.add("+");		
 	}
 
 	@Override
-	protected void buildMinus() {
+	public void buildMinus() {
 		this.stack.add("-");			
 	}
 
 	@Override
-	protected void buildDigit(char ch) {
+	public void buildDigit(char ch) {
 		String number = Character.toString(ch);
 		queue.add(number);
 	}
 
 	@Override
-	protected void buildBracket(String bracket) {
+	public void buildBracket(String bracket) {
 		if(bracket.equals(")"))  this.queue.add(stack.pop());	
 	}
 
