@@ -10,6 +10,8 @@ import cvut.fit.dpo.arithmetic.iterator.SingleValueIterator;
  * Represents number in the arithmetic expression
  * 
  * @author Jan Kurš
+ * 
+ * Leaf Operand
  */
 public class NumericOperand implements Operand {
 	private Integer value;
