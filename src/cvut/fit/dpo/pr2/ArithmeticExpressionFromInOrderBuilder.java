@@ -10,9 +10,7 @@ public class ArithmeticExpressionFromInOrderBuilder extends
 	
 	Stack<Object> stack = new Stack<Object>();
 	Queue<Object> queue = new LinkedList<Object>();
-	
-	ArithmeticExpressionFromRPNBuilder builder;
-	
+		
 	public ArithmeticExpressionFromInOrderBuilder() {
 		super();
 	}
