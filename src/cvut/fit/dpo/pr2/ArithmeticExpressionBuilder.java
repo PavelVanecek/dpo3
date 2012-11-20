@@ -1,6 +1,7 @@
 package cvut.fit.dpo.pr2;
 /**
  * @author povalpet
+ * pattern Builder
  */
 import cvut.fit.dpo.arithmetic.ArithmeticExpression;
 
