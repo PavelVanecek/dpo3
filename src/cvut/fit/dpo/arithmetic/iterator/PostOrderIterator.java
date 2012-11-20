@@ -6,19 +6,18 @@ import cvut.fit.dpo.arithmetic.elements.ExpressionElement;
 
 public class PostOrderIterator extends AbstractIterator {
 	
+	public PostOrderIterator(BinaryOperator operator) {
+		super(operator);
+	}
+
 	private enum State {
-		LEFT_OPERAND,
+		LEFT_OPERAND, 
 		RIGHT_OPERAND,
 		OPERATOR
 	}
 	
-	private State nextState;
+	private State nextState = State.LEFT_OPERAND;
 	
-	public PostOrderIterator(BinaryOperator operator) {
-		super(operator);
-		this.nextState = State.LEFT_OPERAND;
-	}
-
 	@Override
 	public ExpressionElement protectedNext()	{
 		
@@ -39,10 +38,7 @@ public class PostOrderIterator extends AbstractIterator {
 		case OPERATOR:
 			this.hasNext = false;
 			return operator.getExpression();
-		default:
-			break;
 		}
-		// in theory unreachable code
 		return null;
 	}
 

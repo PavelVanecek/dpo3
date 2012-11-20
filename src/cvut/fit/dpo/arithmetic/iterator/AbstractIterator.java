@@ -24,11 +24,11 @@ public abstract class AbstractIterator implements Iterator<ExpressionElement> {
 	@Override
 	public ExpressionElement next() {
 		
-		if (this.innerIterator != null && this.innerIterator.hasNext()) {
-			return this.innerIterator.next();
+		if (innerIterator != null && innerIterator.hasNext()) {
+			return innerIterator.next();
 		}
 		
-		return this.protectedNext();
+		return protectedNext();
 	}
 	
 	protected abstract ExpressionElement protectedNext();

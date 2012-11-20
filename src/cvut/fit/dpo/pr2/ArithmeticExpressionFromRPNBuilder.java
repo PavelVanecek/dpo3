@@ -3,8 +3,6 @@ package cvut.fit.dpo.pr2;
 import java.util.Stack;
 
 import cvut.fit.dpo.arithmetic.AddOperator;
-import cvut.fit.dpo.arithmetic.BinaryOperator;
-import cvut.fit.dpo.arithmetic.EmptyOperator;
 import cvut.fit.dpo.arithmetic.NumericOperand;
 import cvut.fit.dpo.arithmetic.Operand;
 import cvut.fit.dpo.arithmetic.SubstractOperator;
@@ -17,15 +15,9 @@ public class ArithmeticExpressionFromRPNBuilder extends ArithmeticExpressionBuil
 	}
 
 	@Override
-	public void buildExpression() {		
+	public void buildExpression() {
 		Operand operator = this.stack.pop();
-		if(operator instanceof BinaryOperator) {
-			this.expression.setRoot((BinaryOperator) operator);
-		} else {
-			BinaryOperator op = new EmptyOperator(operator, new NumericOperand(0));
-			this.expression.setRoot(op);
-		}
-		
+		this.expression.setRoot(operator);
 	}
 
 	@Override

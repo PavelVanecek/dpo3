@@ -10,13 +10,13 @@ import cvut.fit.dpo.arithmetic.iterator.PostOrderIterator;
  * Represents the Binary operations like + - etc.
  * 
  * @author Jan Kurš
+ * 
+ * Composite Operand
  *
  */
 public abstract class BinaryOperator implements Operand {
 	private Operand firstOperand;
 	private Operand secondOperand;
-
-	protected abstract Integer evaluate(Integer val1, Integer val2);
 	
 	public BinaryOperator(Operand firstOperand, Operand secondOperand)
 	{
@@ -41,18 +41,6 @@ public abstract class BinaryOperator implements Operand {
 	public Operand getSecondOperand()
 	{
 		return secondOperand;
-	}
-	
-	public Integer evaluate()
-	{
-		int val1 = firstOperand.getValue();
-		int val2 = secondOperand.getValue();
-		
-		return evaluate(val1, val2);
-	}
-	
-	public Integer getValue() {
-		return this.evaluate();
 	}
 	
 	public Iterator<ExpressionElement> inOrderIterator()

@@ -6,14 +6,14 @@ import cvut.fit.dpo.arithmetic.elements.ExpressionElement;
 
 public class ArithmeticExpression
 {
-	private BinaryOperator root;
+	private Operand root;
 	
 	public Integer evaluate()
 	{
-		return root.evaluate();
+		return root.getValue();
 	}
 	
-	public void setRoot(BinaryOperator root)
+	public void setRoot(Operand root)
 	{
 		this.root = root;
 	}

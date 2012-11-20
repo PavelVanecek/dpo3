@@ -18,14 +18,13 @@ public class AddOperator extends BinaryOperator
 	}
 
 	@Override
-	protected Integer evaluate(Integer val1, Integer val2)
-	{
-		return val1 + val2;
+	public ExpressionElement getExpression() {
+		return new AddOperation();
 	}
 
 	@Override
-	public ExpressionElement getExpression() {
-		return new AddOperation();
+	public Integer getValue() {
+		return getFirstOperand().getValue() + getSecondOperand().getValue();
 	}
 
 }
