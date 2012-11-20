@@ -1,7 +1,7 @@
 package cvut.fit.dpo.arithmetic;
 
 import cvut.fit.dpo.arithmetic.elements.ExpressionElement;
-import cvut.fit.dpo.arithmetic.elements.SubstractOperation;
+import cvut.fit.dpo.arithmetic.elements.SubstractOperationExpression;
 
 
 /**
@@ -19,7 +19,7 @@ public class SubstractOperator extends BinaryOperator
 
 	@Override
 	public ExpressionElement getExpression() {
-		return new SubstractOperation();
+		return new SubstractOperationExpression();
 	}
 
 	@Override

@@ -1,13 +1,12 @@
 package cvut.fit.dpo.arithmetic.elements;
 
 
-public class OpenBracketOperation implements ExpressionElement
-{
 
+public class SubstractOperationExpression implements ExpressionElement
+{
 	@Override
 	public String stringValue()
 	{
-		return "(";
+		return "-";
 	}
-
 }

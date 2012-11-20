@@ -2,9 +2,9 @@ package cvut.fit.dpo.arithmetic.iterator;
 
 import cvut.fit.dpo.arithmetic.BinaryOperator;
 import cvut.fit.dpo.arithmetic.Operand;
-import cvut.fit.dpo.arithmetic.elements.CloseBracketOperation;
+import cvut.fit.dpo.arithmetic.elements.CloseBracketExpression;
 import cvut.fit.dpo.arithmetic.elements.ExpressionElement;
-import cvut.fit.dpo.arithmetic.elements.OpenBracketOperation;
+import cvut.fit.dpo.arithmetic.elements.OpenBracketExpression;
 
 public class InOrderIterator extends AbstractIterator {
 
@@ -36,7 +36,7 @@ public class InOrderIterator extends AbstractIterator {
 		
 		case LEFT_BRACKET:
 			this.nextState = State.LEFT_OPERAND;
-			return new OpenBracketOperation();
+			return new OpenBracketExpression();
 			
 		case LEFT_OPERAND:
 			this.nextState = State.OPERATOR;
@@ -56,7 +56,7 @@ public class InOrderIterator extends AbstractIterator {
 			
 		case RIGHT_BRACKET:
 			this.hasNext = false;
-			return new CloseBracketOperation();
+			return new CloseBracketExpression();
 			
 		default:
 			break;
